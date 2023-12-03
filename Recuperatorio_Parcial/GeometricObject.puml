@@ -1,0 +1,51 @@
+@startuml
+class Circle {
+- double radius
++ double getRadius()
++ void setRadius(double)
++ double getArea()
++ double getDiameter()
++ double getPerimeter()
++ String toString()
+}
+abstract class Shape {
++ String color
++ boolean filled
++ String getColor()
++ void setColor(String)
++ boolean isFilled()
++ void setFilled(boolean)
++ {abstract}double getArea()
++ {abstract}double getPerimeter()
++ String toString()
+}
+class Main {
++ {static} void main(String[])
++ {static} boolean equalArea(Shape,Shape)
++ {static} void displayGeometricObject(Shape)
+}
+class Square {
+- double side
++ double getSide()
++ void setSide(double)
++ void setWidth(double)
++ void setLength(double)
++ String toString()
+}
+class Rectangle {
+- double width
+- double length
++ double getWidth()
++ void setWidth(double)
++ double getLength()
++ void setLength(double)
++ double getArea()
++ double getPerimeter()
++ String toString()
+}
+
+
+Shape <|-- Circle
+Rectangle <|-- Square
+Shape <|-- Rectangle
+@enduml
